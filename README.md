@@ -11,7 +11,7 @@ There are three main functions:
 
 * `MZ_test` executes the basic Mincer-Zarnowitz test for autocalibration over multiple horizons and quantiles when provided with forecasts and corresponding observations.
 * `MZ_test_multi` is an extension of the basic test for multiple variables.
-* 'MZ_test_augmented` is an extension of the basic test, where additional regressors can be added to the Mincer-Zarnowitz regressions to test a corresponding stronger form of optimality.
+* `MZ_test_augmented` is an extension of the basic test, where additional regressors can be added to the Mincer-Zarnowitz regressions to test a corresponding stronger form of optimality.
 
 ## Installation
 
@@ -40,10 +40,8 @@ T <- 100 # length of evaluation sample
 H <- 3   # maximum forecast horizon
 tau <- c(0.25,0.75) # quantile levels of interest
 
-
 b <- 0.6 # AR(1) parameter
 btilde <- 0.8 # AR(1) parameter used by the forecaster
-
 
 
 # simulate series of size T+h from AR(1) process with coefficient 0.6 (no intercept)
@@ -55,9 +53,8 @@ for (t in 2:(T+H)){
   y[t] <- b*y[t-1]+eps[t]
 }
 
+
 # forecasts
-
-
 
 # generate a list of length(tau) of T x H matrices to save the forecasts
 yhat <- lapply(1:length(tau),function(x){matrix(NA,T,H)})
@@ -70,6 +67,7 @@ for (taucount in 1:length(tau)){
     }
   }
 }
+
 
 # observations
 
