@@ -1,0 +1,16 @@
+Package: quantoptimR
+Type: Package
+Title: Quantile Forecast Optimality Tests
+Version: 0.1
+Authors@R: 
+    c(person("Jack", "Fosten", role = "aut"), person("Daniel", "Gutknecht", role = "aut"), person("Marc-Oliver", "Pohle", email="marc-oliver.pohle@h-its.org", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-0020-3604")))
+Description: The package implements tests for optimality of quantile forecasts over possibly multiple horizons
+    and multiple quantiles based on Mincer-Zarnowitz quantile regressions. The basic test checks the null hypothesis 
+    of autocalibration, there are two extensions, one test for stronger forms of optimality and one for a multivariate setting.
+URL: https://github.com/MarcPohle/quantoptimR
+License: `use_gpl3_license()`
+Encoding: UTF-8
+Imports: quantreg
+RoxygenNote: 7.2.3
+Roxygen: list(markdown = TRUE)
